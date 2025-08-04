@@ -1,25 +1,27 @@
-# ✅ Base dependencies
-streamlit
-ultralytics==8.2.64
+# Streamlit app support
+streamlit>=1.33.0
+
+# YOLOv8 and dependencies
+ultralytics>=8.2.64
 torch>=1.8.0
 torchvision>=0.9.0
-opencv-python-headless>=4.1.1
-pandas>=1.1.4
+
+# OpenCV (headless version for Streamlit Cloud)
+opencv-python-headless>=4.5.5.62
+
+# Image processing and utilities
 numpy>=1.23.5
 matplotlib>=3.3
-Pillow>=10.3.0
-PyYAML>=5.3.1
+pillow>=10.3.0
+scipy>=1.4.1
+pandas>=1.3.0
+seaborn>=0.11.0
 tqdm>=4.66.3
+PyYAML>=5.3.1
 requests>=2.32.2
 
-# ✅ Optional for performance/logging
-psutil
-thop
-seaborn>=0.11.0
-setuptools>=70.0.0
+# Optional - for FLOPs (model complexity) calculation
+thop>=0.1.1
 
-# ❌ Do NOT use playsound in cloud version
-# playsound==1.2.2  # REMOVE this — doesn't work on cloud
-
-# ✅ Git (optional but useful)
+# Optional - if using Git operations in code
 gitpython>=3.1.30
